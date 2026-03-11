@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhysioCare — Expert Physiotherapy & Rehabilitation</title>
+  <meta name="description" content="PhysioCare provides expert physiotherapy, sports rehabilitation, and pain management services. Book your appointment today and start your journey to recovery.">
+  <meta name="keywords" content="physiotherapy, rehabilitation, sports injury, pain management, physical therapy">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="navbar-logo">
+        <div class="logo-icon"><i class="fas fa-heartbeat"></i></div>
+        PhysioCare
+      </a>
+      <div class="navbar-links" id="navLinks">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#doctors">Doctors</a>
+        <a href="#booking">Booking</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#contact">Contact</a>
+        <a href="#booking" class="btn btn-primary navbar-cta">Book Now</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <img src="assets/hero-bg.png" alt="PhysioCare Clinic Interior">
+    </div>
+    <div class="hero-shapes">
+      <div class="hero-shape hero-shape-1"></div>
+      <div class="hero-shape hero-shape-2"></div>
+      <div class="hero-shape hero-shape-3"></div>
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Trusted by 5,000+ patients
+        </div>
+        <h1>Your Recovery<br>Starts <span>Here</span></h1>
+        <p class="hero-description">
+          Expert physiotherapy care designed to restore your movement, relieve pain, 
+          and get you back to doing what you love — faster than ever.
+        </p>
+        <div class="hero-buttons">
+          <a href="#booking" class="btn btn-primary">
+            <i class="fas fa-calendar-check"></i> Book Appointment
+          </a>
+          <a href="#services" class="btn btn-secondary">
+            <i class="fas fa-play-circle"></i> Our Services
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="stat-number">15<span>+</span></div>
+            <div class="stat-label">Years of Experience</div>
+          </div>
+          <div class="hero-stat">
+            <div class="stat-number">5K<span>+</span></div>
+            <div class="stat-label">Happy Patients</div>
+          </div>
+          <div class="hero-stat">
+            <div class="stat-number">98<span>%</span></div>
+            <div class="stat-label">Recovery Rate</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT / BENEFITS SECTION ========== -->
+  <section class="about section-padding" id="about">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">Why Choose Us</span>
+        <h2>Benefits of Physiotherapy</h2>
+        <p>Physiotherapy is a proven approach to healing that goes beyond temporary relief — it treats the root cause of your pain.</p>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-card animate-on-scroll delay-1">
+          <div class="benefit-icon">🦴</div>
+          <h3>Pain Relief</h3>
+          <p>Effective techniques to reduce and manage chronic and acute pain without over-reliance on medications.</p>
+        </div>
+        <div class="benefit-card animate-on-scroll delay-2">
+          <div class="benefit-icon">🏃</div>
+          <h3>Improved Mobility</h3>
+          <p>Restore range of motion and flexibility with targeted exercises and manual therapy techniques.</p>
+        </div>
+        <div class="benefit-card animate-on-scroll delay-3">
+          <div class="benefit-icon">💪</div>
+          <h3>Strength Recovery</h3>
+          <p>Rebuild muscle strength after injuries, surgeries, or prolonged periods of reduced activity.</p>
+        </div>
+        <div class="benefit-card animate-on-scroll delay-1">
+          <div class="benefit-icon">🧠</div>
+          <h3>Better Balance</h3>
+          <p>Improve coordination and balance to prevent falls and enhance athletic performance.</p>
+        </div>
+        <div class="benefit-card animate-on-scroll delay-2">
+          <div class="benefit-icon">❤️</div>
+          <h3>Heart Health</h3>
+          <p>Cardiac rehabilitation programs that strengthen your heart and improve cardiovascular fitness.</p>
+        </div>
+        <div class="benefit-card animate-on-scroll delay-3">
+          <div class="benefit-icon">🛡️</div>
+          <h3>Injury Prevention</h3>
+          <p>Learn proper body mechanics and get exercise programs designed to prevent future injuries.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES SECTION ========== -->
+  <section class="services section-padding" id="services">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">Our Expertise</span>
+        <h2>Specialized Services</h2>
+        <p>Comprehensive physiotherapy treatments tailored to your unique needs and recovery goals.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card animate-on-scroll delay-1">
+          <div class="service-icon"><i class="fas fa-running"></i></div>
+          <h3>Sports Rehabilitation</h3>
+          <p>Specialized recovery programs for athletes with sport-specific injury treatment and performance enhancement protocols.</p>
+          <a href="#booking" class="service-link">Book Session <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card animate-on-scroll delay-2">
+          <div class="service-icon"><i class="fas fa-bone"></i></div>
+          <h3>Spine & Back Care</h3>
+          <p>Expert treatment for herniated discs, sciatica, scoliosis, and all types of back and neck pain conditions.</p>
+          <a href="#booking" class="service-link">Book Session <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card animate-on-scroll delay-3">
+          <div class="service-icon"><i class="fas fa-procedures"></i></div>
+          <h3>Post-Surgery Recovery</h3>
+          <p>Structured rehabilitation programs after joint replacements, ligament repairs, and other surgical procedures.</p>
+          <a href="#booking" class="service-link">Book Session <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card animate-on-scroll delay-1">
+          <div class="service-icon"><i class="fas fa-hand-holding-medical"></i></div>
+          <h3>Manual Therapy</h3>
+          <p>Hands-on techniques including joint mobilization, soft tissue manipulation, and myofascial release therapy.</p>
+          <a href="#booking" class="service-link">Book Session <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card animate-on-scroll delay-2">
+          <div class="service-icon"><i class="fas fa-brain"></i></div>
+          <h3>Neurological Rehab</h3>
+          <p>Specialized treatment for stroke recovery, Parkinson's disease, multiple sclerosis, and spinal cord injuries.</p>
+          <a href="#booking" class="service-link">Book Session <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card animate-on-scroll delay-3">
+          <div class="service-icon"><i class="fas fa-child"></i></div>
+          <h3>Pediatric Therapy</h3>
+          <p>Gentle, age-appropriate physiotherapy for children with developmental delays, injuries, and orthopedic conditions.</p>
+          <a href="#booking" class="service-link">Book Session <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DOCTORS / TEAM SECTION ========== -->
+  <section class="doctors section-padding" id="doctors">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">Meet the Team</span>
+        <h2>Our Expert Doctors</h2>
+        <p>Highly qualified and experienced physiotherapists dedicated to your complete recovery.</p>
+      </div>
+
+      <div class="doctors-grid">
+        <div class="doctor-card animate-on-scroll delay-1">
+          <div class="doctor-image">
+            <img src="assets/doctor-1.png" alt="Dr. David Chen">
+            <div class="doctor-overlay">
+              <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+          <div class="doctor-info">
+            <h3>Dr. David Chen</h3>
+            <p class="doctor-specialty">Chief Physiotherapist</p>
+            <p class="doctor-experience">15+ years experience • Sports Medicine</p>
+          </div>
+        </div>
+
+        <div class="doctor-card animate-on-scroll delay-2">
+          <div class="doctor-image">
+            <img src="assets/doctor-2.png" alt="Dr. Sarah Jenkins">
+            <div class="doctor-overlay">
+              <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+          <div class="doctor-info">
+            <h3>Dr. Sarah Jenkins</h3>
+            <p class="doctor-specialty">Spinal Specialist</p>
+            <p class="doctor-experience">12+ years experience • Back & Neck Care</p>
+          </div>
+        </div>
+
+        <div class="doctor-card animate-on-scroll delay-3">
+          <div class="doctor-image">
+            <img src="assets/doctor-3.png" alt="Dr. Marcus Williams">
+            <div class="doctor-overlay">
+              <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+          <div class="doctor-info">
+            <h3>Dr. Marcus Williams</h3>
+            <p class="doctor-specialty">Sports Rehabilitator</p>
+            <p class="doctor-experience">8+ years experience • Athletic Injuries</p>
+          </div>
+        </div>
+
+        <div class="doctor-card animate-on-scroll delay-4">
+          <div class="doctor-image">
+            <img src="assets/doctor-4.png" alt="Dr. Emily Rodriguez">
+            <div class="doctor-overlay">
+              <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+          <div class="doctor-info">
+            <h3>Dr. Emily Rodriguez</h3>
+            <p class="doctor-specialty">Neurological Rehab</p>
+            <p class="doctor-experience">10+ years experience • Neuro Recovery</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== APPOINTMENT BOOKING SECTION ========== -->
+  <section class="booking section-padding" id="booking">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">Schedule a Visit</span>
+        <h2>Book Your Appointment</h2>
+        <p>Take the first step towards recovery. Fill out the form below and we'll confirm your appointment within 24 hours.</p>
+      </div>
+
+      <div class="booking-container animate-on-scroll">
+        <form class="booking-form" id="bookingForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" name="fullName" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567" required>
+            </div>
+            <div class="form-group">
+              <label for="doctor">Select Doctor</label>
+              <select id="doctor" name="doctor" required>
+                <option value="">Choose a doctor</option>
+                <option value="dr-chen">Dr. David Chen — Sports Medicine</option>
+                <option value="dr-jenkins">Dr. Sarah Jenkins — Spine Specialist</option>
+                <option value="dr-williams">Dr. Marcus Williams — Sports Rehab</option>
+                <option value="dr-rodriguez">Dr. Emily Rodriguez — Neuro Rehab</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="appointmentDate">Preferred Date</label>
+              <input type="text" id="appointmentDate" name="appointmentDate" placeholder="Select date" required>
+            </div>
+            <div class="form-group">
+              <label for="appointmentTime">Preferred Time</label>
+              <select id="appointmentTime" name="appointmentTime" required>
+                <option value="">Select a time slot</option>
+                <option value="09:00">09:00 AM</option>
+                <option value="09:30">09:30 AM</option>
+                <option value="10:00">10:00 AM</option>
+                <option value="10:30">10:30 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="11:30">11:30 AM</option>
+                <option value="14:00">02:00 PM</option>
+                <option value="14:30">02:30 PM</option>
+                <option value="15:00">03:00 PM</option>
+                <option value="15:30">03:30 PM</option>
+                <option value="16:00">04:00 PM</option>
+                <option value="16:30">04:30 PM</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="service">Service Type</label>
+              <select id="service" name="service" required>
+                <option value="">Choose a service</option>
+                <option value="sports-rehab">Sports Rehabilitation</option>
+                <option value="spine-care">Spine & Back Care</option>
+                <option value="post-surgery">Post-Surgery Recovery</option>
+                <option value="manual-therapy">Manual Therapy</option>
+                <option value="neuro-rehab">Neurological Rehab</option>
+                <option value="pediatric">Pediatric Therapy</option>
+                <option value="general">General Consultation</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="insurance">Insurance Provider (Optional)</label>
+              <input type="text" id="insurance" name="insurance" placeholder="Your insurance provider">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group full-width">
+              <label for="message">Additional Notes</label>
+              <textarea id="message" name="message" placeholder="Describe your condition or any specific concerns..."></textarea>
+            </div>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn btn-accent">
+              <i class="fas fa-calendar-check"></i> Confirm Appointment
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS / REVIEWS SECTION ========== -->
+  <section class="testimonials section-padding" id="testimonials">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">Patient Stories</span>
+        <h2>What Our Patients Say</h2>
+        <p>Real experiences from real patients who've transformed their lives through our care.</p>
+      </div>
+
+      <div class="testimonials-slider animate-on-scroll" id="testimonialSlider">
+        <div class="testimonials-track" id="testimonialTrack">
+          <div class="testimonial-card">
+            <div class="testimonial-inner">
+              <div class="testimonial-stars">
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+              </div>
+              <p class="testimonial-text">After my knee surgery, I was terrified I'd never run again. Dr. Chen and his team created a personalized recovery plan that had me jogging within 3 months. The care and attention here is simply outstanding.</p>
+              <div class="testimonial-author">
+                <div class="testimonial-author-avatar">MR</div>
+                <div class="testimonial-author-info">
+                  <h4>Michael Roberts</h4>
+                  <p>Marathon Runner • ACL Recovery</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-inner">
+              <div class="testimonial-stars">
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+              </div>
+              <p class="testimonial-text">I lived with chronic back pain for 8 years. Dr. Jenkins identified the root cause in my first visit. After 6 weeks of treatment, my pain levels dropped from an 8 to a 2. Life-changing doesn't begin to describe it.</p>
+              <div class="testimonial-author">
+                <div class="testimonial-author-avatar">AL</div>
+                <div class="testimonial-author-info">
+                  <h4>Amanda Liu</h4>
+                  <p>Teacher • Chronic Back Pain</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-inner">
+              <div class="testimonial-stars">
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star-half-alt"></i></span>
+              </div>
+              <p class="testimonial-text">My daughter had a sports injury that kept her off the soccer field for months. Dr. Williams worked with her patiently and got her back to playing at full strength. Incredible team with the best equipment I've seen.</p>
+              <div class="testimonial-author">
+                <div class="testimonial-author-avatar">JP</div>
+                <div class="testimonial-author-info">
+                  <h4>James Patterson</h4>
+                  <p>Parent • Daughter's Sports Injury</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-inner">
+              <div class="testimonial-stars">
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+              </div>
+              <p class="testimonial-text">After my stroke, I thought I'd never regain full movement. Dr. Rodriguez and her neuro rehab program gave me hope and results. I'm now living independently again. I can't recommend PhysioCare enough!</p>
+              <div class="testimonial-author">
+                <div class="testimonial-author-avatar">RK</div>
+                <div class="testimonial-author-info">
+                  <h4>Robert Kim</h4>
+                  <p>Retired • Stroke Recovery</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonials-nav">
+          <button class="testimonial-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+          <div class="testimonials-dots" id="testimonialDots">
+            <button class="testimonial-dot active" data-index="0"></button>
+            <button class="testimonial-dot" data-index="1"></button>
+            <button class="testimonial-dot" data-index="2"></button>
+            <button class="testimonial-dot" data-index="3"></button>
+          </div>
+          <button class="testimonial-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT SECTION ========== -->
+  <section class="contact section-padding" id="contact">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">Get in Touch</span>
+        <h2>Contact Us</h2>
+        <p>We're here to help. Reach out to us for any questions or to schedule your first visit.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info-cards">
+          <div class="contact-card animate-on-scroll delay-1">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h4>Our Location</h4>
+              <p>123 Wellness Avenue, Suite 200<br>Downtown Medical District, NY 10001</p>
+            </div>
+          </div>
+          <div class="contact-card animate-on-scroll delay-2">
+            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+            <div>
+              <h4>Call Us</h4>
+              <p>+1 (555) 123-4567<br>Emergency: +1 (555) 987-6543</p>
+            </div>
+          </div>
+          <div class="contact-card animate-on-scroll delay-3">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h4>Email Us</h4>
+              <p>info@physiocare.com<br>appointments@physiocare.com</p>
+            </div>
+          </div>
+          <div class="contact-card animate-on-scroll delay-4">
+            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <h4>Working Hours</h4>
+              <p>Mon – Fri: 8:00 AM – 6:00 PM<br>Sat: 9:00 AM – 2:00 PM</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-map animate-on-scroll delay-2">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.182280486!2d-73.9857!3d40.7484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ0JzU0LjIiTiA3M8KwNTknMDguNSJX!5e0!3m2!1sen!2sus!4v1678901234567" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="logo-icon"><i class="fas fa-heartbeat"></i></div>
+            PhysioCare
+          </div>
+          <p>Expert physiotherapy care dedicated to helping you move better, feel better, and live better. Your journey to recovery starts with us.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <a href="#about">About Us</a>
+          <a href="#services">Services</a>
+          <a href="#doctors">Our Doctors</a>
+          <a href="#booking">Book Appointment</a>
+          <a href="#testimonials">Patient Reviews</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-column">
+          <h4>Services</h4>
+          <a href="#services">Sports Rehabilitation</a>
+          <a href="#services">Spine & Back Care</a>
+          <a href="#services">Post-Surgery Recovery</a>
+          <a href="#services">Manual Therapy</a>
+          <a href="#services">Neurological Rehab</a>
+          <a href="#services">Pediatric Therapy</a>
+        </div>
+        <div class="footer-column footer-newsletter">
+          <h4>Stay Updated</h4>
+          <p>Subscribe to our newsletter for health tips, clinic updates, and special offers.</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 PhysioCare. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== CONFIRMATION MODAL ========== -->
+  <div class="modal-overlay" id="confirmModal">
+    <div class="modal">
+      <div class="modal-icon">✓</div>
+      <h3>Appointment Confirmed!</h3>
+      <p>Thank you for booking with PhysioCare. We'll send a confirmation email with your appointment details shortly. See you soon!</p>
+      <button class="btn btn-primary" id="closeModal">Got It</button>
+    </div>
+  </div>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="main.js"></script>
+</body>
+</html>
