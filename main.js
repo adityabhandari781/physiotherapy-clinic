@@ -149,8 +149,15 @@ document.addEventListener('DOMContentLoaded', () => {
       // Reset form
       bookingForm.reset();
 
-      // Log booking data (in production, send to backend)
-      console.log('Appointment booked:', data);
+      fetch("https://script.google.com/macros/s/AKfycbwEA7GlK7f63EVYlMtqvItM0ZrjE30UodFDWfDXmzU2imFg-0cuWy3ARUAKzotFZofWrQ/exec", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          "Content-Type": "application/json"
+        }
+      })
+      .then(res => res.json())
+      .then(data => console.log("Success:", data));
     }
   });
 
