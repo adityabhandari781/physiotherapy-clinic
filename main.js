@@ -149,12 +149,15 @@ document.addEventListener('DOMContentLoaded', () => {
       // Reset form
       bookingForm.reset();
 
+      const data_ = new URLSearchParams(data);
+
       fetch("https://script.google.com/macros/s/AKfycbwEA7GlK7f63EVYlMtqvItM0ZrjE30UodFDWfDXmzU2imFg-0cuWy3ARUAKzotFZofWrQ/exec", {
         method: "POST",
-        body: JSON.stringify(data),
-        headers: {
-          "Content-Type": "application/json"
-        }
+        // body: JSON.stringify(data),
+        body: data_,
+        // headers: {
+        //   "Content-Type": "application/json"
+        // }
       })
       .then(res => res.json())
       .then(data => console.log("Success:", data));
@@ -314,9 +317,9 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(entry => {
       if (entry.isIntersecting && !statsAnimated) {
         statsAnimated = true;
-        animateCount(statNumbers[0], 15, '+');
-        animateCount(statNumbers[1], 5, 'K+');
-        animateCount(statNumbers[2], 98, '%');
+        animateCount(statNumbers[0], 7, '+');
+        animateCount(statNumbers[1], 2000, '+');
+        animateCount(statNumbers[2], 300, '+');
       }
     });
   }, { threshold: 0.5 });
