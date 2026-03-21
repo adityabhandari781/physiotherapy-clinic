@@ -175,6 +175,49 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // ========== DOCTOR MINI SLIDESHOW ==========
+  const doctorSliderRoot = document.getElementById('doctorMiniSlider');
+  if (doctorSliderRoot) {
+    const doctorSlides = doctorSliderRoot.querySelectorAll('.doctor-mini-slide');
+    const doctorDots = doctorSliderRoot.querySelectorAll('.doctor-mini-dot');
+    let currentDoctorSlide = 0;
+    let doctorAutoPlayInterval;
+
+    function goToDoctorSlide(index) {
+      currentDoctorSlide = index;
+      doctorSlides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === currentDoctorSlide);
+      });
+      doctorDots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentDoctorSlide);
+      });
+    }
+
+    function nextDoctorSlide() {
+      goToDoctorSlide((currentDoctorSlide + 1) % doctorSlides.length);
+    }
+
+    function startDoctorAutoPlay() {
+      doctorAutoPlayInterval = setInterval(nextDoctorSlide, 3500);
+    }
+
+    function resetDoctorAutoPlay() {
+      clearInterval(doctorAutoPlayInterval);
+      startDoctorAutoPlay();
+    }
+
+    doctorDots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        goToDoctorSlide(parseInt(dot.dataset.index, 10));
+        resetDoctorAutoPlay();
+      });
+    });
+
+    // doctorSliderRoot.addEventListener('mouseenter', () => clearInterval(doctorAutoPlayInterval));
+    // doctorSliderRoot.addEventListener('mouseleave', startDoctorAutoPlay);
+    startDoctorAutoPlay();
+  }
+
   // Close modal with Escape key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && confirmModal.classList.contains('active')) {
