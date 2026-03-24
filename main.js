@@ -110,11 +110,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ========== BOOKING FORM VALIDATION & SUBMISSION ==========
+  const supabase = window.supabase.createClient(
+    "https://fahinjkybzipjrluolus.supabase.co",
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZhaGluamt5YnppcGpybHVvbHVzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQyOTI3MzYsImV4cCI6MjA4OTg2ODczNn0.W11ZYceoVRnyapfAroF-ByK5pO1aSgu_D6U6UwFQyXY"
+  );
   const bookingForm = document.getElementById('bookingForm');
   const confirmModal = document.getElementById('confirmModal');
   const closeModal = document.getElementById('closeModal');
 
-  bookingForm.addEventListener('submit', (e) => {
+  bookingForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     // Basic validation
@@ -122,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const data = Object.fromEntries(formData.entries());
 
     let isValid = true;
-    const requiredFields = ['fullName', 'email', 'phone', 'doctor', 'appointmentDate', 'appointmentTime', 'service'];
+    const requiredFields = ['fullName', 'email', 'appointmentDate', 'service'];
 
     requiredFields.forEach(field => {
       const input = document.getElementById(field);
@@ -145,22 +149,39 @@ document.addEventListener('DOMContentLoaded', () => {
     if (isValid) {
       // Show confirmation modal
       confirmModal.classList.add('active');
+      // console.log(data);
 
       // Reset form
       bookingForm.reset();
 
-      const data_ = new URLSearchParams(data);
+      // fetch("https://fahinjkybzipjrluolus.supabase.co/rest/v1/appointments", {
+      //   method: "POST",
+      //   headers: {
+      //     "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZhaGluamt5YnppcGpybHVvbHVzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQyOTI3MzYsImV4cCI6MjA4OTg2ODczNn0.W11ZYceoVRnyapfAroF-ByK5pO1aSgu_D6U6UwFQyXY",
+      //     "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZhaGluamt5YnppcGpybHVvbHVzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQyOTI3MzYsImV4cCI6MjA4OTg2ODczNn0.W11ZYceoVRnyapfAroF-ByK5pO1aSgu_D6U6UwFQyXY",
+      //     "Content-Type": "application/json",
+      //     "Prefer": "return=minimal"
+      //   },
+      //   body: JSON.stringify(data)
+      // })
+      // .then(res => {
+      //   if (!res.ok) throw new Error("Network response was not ok");
+      //   console.log("Success: Appointment booked!");
+      // })
+      // .catch(error => console.error("Error:", error));
+      const { data_, error } = await supabase
+        .from("consultations")
+        .insert([{
+          fullName: data.fullName,
+          email: data.email,
+          appointmentDate: data.appointmentDate,
+          service: data.service,
+          notes: data.message
+        }]);
 
-      fetch("https://script.google.com/macros/s/AKfycbwEA7GlK7f63EVYlMtqvItM0ZrjE30UodFDWfDXmzU2imFg-0cuWy3ARUAKzotFZofWrQ/exec", {
-        method: "POST",
-        // body: JSON.stringify(data),
-        body: data_,
-        // headers: {
-        //   "Content-Type": "application/json"
-        // }
-      })
-      .then(res => res.json())
-      .then(data => console.log("Success:", data));
+      if (error) console.log(error);
+
+      console.log("Success: Appointment booked!");
     }
   });
 
