@@ -111,8 +111,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ========== BOOKING FORM VALIDATION & SUBMISSION ==========
   const supabase = window.supabase.createClient(
-    "https://fahinjkybzipjrluolus.supabase.co",
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZhaGluamt5YnppcGpybHVvbHVzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQyOTI3MzYsImV4cCI6MjA4OTg2ODczNn0.W11ZYceoVRnyapfAroF-ByK5pO1aSgu_D6U6UwFQyXY"
+    "https://lrazddrdqfwysxqqbpwl.supabase.co",
+    "sb_publishable_v7zsWdG1LzLj-ov4VBd9kA__W7QwJpH"
   );
   const bookingForm = document.getElementById('bookingForm');
   const confirmModal = document.getElementById('confirmModal');
@@ -120,6 +120,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   bookingForm.addEventListener('submit', async (e) => {
     e.preventDefault();
+
+    // reCAPTCHA validation
+    // const recaptchaResponse = grecaptcha.getResponse();
+    // if (!recaptchaResponse) {
+    //   alert("Please complete the reCAPTCHA to verify you are not a robot.");
+    //   return;
+    // }
 
     // Basic validation
     const formData = new FormData(bookingForm);
@@ -153,12 +160,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Reset form
       bookingForm.reset();
+      // if (typeof grecaptcha !== 'undefined') {
+      //   grecaptcha.reset();
+      // }
 
-      // fetch("https://fahinjkybzipjrluolus.supabase.co/rest/v1/appointments", {
+      // fetch("https://lrazddrdqfwysxqqbpwl.supabase.co/rest/v1/appointments", {
       //   method: "POST",
       //   headers: {
-      //     "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZhaGluamt5YnppcGpybHVvbHVzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQyOTI3MzYsImV4cCI6MjA4OTg2ODczNn0.W11ZYceoVRnyapfAroF-ByK5pO1aSgu_D6U6UwFQyXY",
-      //     "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZhaGluamt5YnppcGpybHVvbHVzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQyOTI3MzYsImV4cCI6MjA4OTg2ODczNn0.W11ZYceoVRnyapfAroF-ByK5pO1aSgu_D6U6UwFQyXY",
+      //     "apikey": "sb_publishable_v7zsWdG1LzLj-ov4VBd9kA__W7QwJpH",
+      //     "Authorization": "Bearer sb_publishable_v7zsWdG1LzLj-ov4VBd9kA__W7QwJpH",
       //     "Content-Type": "application/json",
       //     "Prefer": "return=minimal"
       //   },
@@ -191,9 +201,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   confirmModal.addEventListener('click', (e) => {
-    if (e.target === confirmModal) {
+    if (e.target === confirmModal)
       confirmModal.classList.remove('active');
-    }
   });
 
   // ========== DOCTOR MINI SLIDESHOW ==========
